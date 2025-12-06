@@ -14,7 +14,7 @@ const Upcoming: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Papa.parse('/upcoming_shows.csv', {
+    Papa.parse(`${import.meta.env.BASE_URL}upcoming_shows.csv`, {
       download: true,
       header: true,
       complete: (results) => {

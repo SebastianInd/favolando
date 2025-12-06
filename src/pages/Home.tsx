@@ -21,7 +21,7 @@ const Home: React.FC = () => {
           title="Il trapasso con fracasso"
           season="Stagione 2023-2024"
           description="Una commedia esilarante che affronta temi profondi con leggerezza e ironia. Un viaggio tra il ridicolo e il sublime."
-          imageUrl="/images/trapasso.png"
+          imageUrl={`${import.meta.env.BASE_URL}images/trapasso.png`}
           credits={[]}
         />
       </section>

@@ -7,7 +7,7 @@ const Archive: React.FC = () => {
       title: "Prezzemolina",
       season: "Stagione 2018-2019",
       description: "Una fiaba classica rivisitata con brio e colori.",
-      imageUrl: "/images/prezzemolina.png",
+      imageUrl: `${import.meta.env.BASE_URL}images/prezzemolina.png`,
       credits: [
       ]
     },
@@ -15,14 +15,14 @@ const Archive: React.FC = () => {
       title: "Il Pifferaio Magico",
       season: "Stagione 2016-2017",
       description: "La leggenda di Hamelin prende vita sul palco.",
-      imageUrl: "/images/pifferaio.png",
+      imageUrl: `${import.meta.env.BASE_URL}images/pifferaio.png`,
       credits: []
     },
     {
       title: "Aladino",
       season: "Stagione 2013-2015",
       description: "Un viaggio da mille e una notte.",
-      imageUrl: "/images/aladino.png",
+      imageUrl: `${import.meta.env.BASE_URL}images/aladino.png`,
       credits: []
     }
   ];
