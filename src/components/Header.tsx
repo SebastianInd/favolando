@@ -16,7 +16,7 @@ const Header: React.FC = () => {
     <header className="site-header">
       <div className="container header-content">
         <Link to="/" className="logo">
-          <img src="public/logo_favolando.svg" alt="Favolando Logo" className="logo-img" />
+          <img src={`${import.meta.env.BASE_URL}logo_favolando.svg`} alt="Favolando Logo" className="logo-img" />
         </Link>
         <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
           <span className={`hamburger ${isMenuOpen ? 'open' : ''}`}></span>
