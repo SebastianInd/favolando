@@ -28,9 +28,9 @@ const Home: React.FC = () => {
 
       <section className="teaser-section container">
         <div className="teaser-card">
-          <h2>Nuova Produzione 2025</h2>
+          <h2>Nuova Produzione 2026</h2>
           <p>Stiamo lavorando a qualcosa di magico per voi!</p>
-          <p className="teaser-date">La Prima è prevista per l'inizio del 2025</p>
+          <p className="teaser-date">La Prima è prevista per il 18 ottobre 2026</p>
           <Link to="/upcoming" className="text-link">Scopri di più &rarr;</Link>
         </div>
       </section>
