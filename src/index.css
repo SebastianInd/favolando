@@ -44,12 +44,19 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+}
+
+.logo-img {
+  height: 50px;
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
 }
 
 .main-nav ul {
