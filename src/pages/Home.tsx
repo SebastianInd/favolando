@@ -17,13 +17,15 @@ const Home: React.FC = () => {
 
       <section className="current-production-section container">
         <h2 className="section-title">In Scena</h2>
-        <ShowCard
-          title="Il trapasso con fracasso"
-          season="Stagione 2023-2024"
-          description="Una commedia esilarante che affronta temi profondi con leggerezza e ironia. Un viaggio tra il ridicolo e il sublime."
-          imageUrl={`${import.meta.env.BASE_URL}images/trapasso.png`}
-          credits={[]}
-        />
+        <Link to="/in-scena" className="show-card-link">
+            <ShowCard
+            title="Il trapasso con fracasso"
+            season="Stagione 2023-2024"
+            description="Una commedia esilarante che affronta temi profondi con leggerezza e ironia. Un viaggio tra il ridicolo e il sublime."
+            imageUrl={`${import.meta.env.BASE_URL}images/trapasso.png`}
+            credits={[]}
+            />
+        </Link>
       </section>
 
       <section className="teaser-section container">
@@ -31,7 +33,7 @@ const Home: React.FC = () => {
           <h2>Nuova Produzione 2026</h2>
           <p>Stiamo lavorando a qualcosa di magico per voi!</p>
           <p className="teaser-date">La Prima è prevista per il 18 ottobre 2026</p>
-          <Link to="/upcoming" className="text-link">Scopri di più &rarr;</Link>
+          <Link to="/in-scena" className="text-link">Scopri di più &rarr;</Link>
         </div>
       </section>
     </div>

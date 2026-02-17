@@ -1,38 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ShowCard from '../components/ShowCard';
+import { shows } from '../data/shows';
 
 const Archive: React.FC = () => {
-  const pastShows = [
-    {
-      title: "Prezzemolina",
-      season: "Stagione 2018-2019",
-      description: "Una fiaba classica rivisitata con brio e colori.",
-      imageUrl: `${import.meta.env.BASE_URL}images/prezzemolina.png`,
-      credits: [
-      ]
-    },
-    {
-      title: "Il Pifferaio Magico",
-      season: "Stagione 2016-2017",
-      description: "La leggenda di Hamelin prende vita sul palco.",
-      imageUrl: `${import.meta.env.BASE_URL}images/pifferaio.png`,
-      credits: []
-    },
-    {
-      title: "Aladino",
-      season: "Stagione 2013-2015",
-      description: "Un viaggio da mille e una notte.",
-      imageUrl: `${import.meta.env.BASE_URL}images/aladino.png`,
-      credits: []
-    }
-  ];
+  const pastShows = shows.filter(show => !show.isCurrent);
 
   return (
     <div className="archive-page container">
       <h1 className="page-title">Archivio Spettacoli</h1>
       <div className="shows-grid">
-        {pastShows.map((show, index) => (
-          <ShowCard key={index} {...show} />
+        {pastShows.map((show) => (
+          <Link to={`/archivio/${show.id}`} key={show.id} className="show-card-link">
+            <ShowCard
+                title={show.title}
+                season={show.season}
+                description={show.description}
+                imageUrl={show.imageUrl}
+                credits={[]} // ShowCard expects credits, we can pass empty or adapt ShowCard later
+            />
+          </Link>
         ))}
       </div>
     </div>

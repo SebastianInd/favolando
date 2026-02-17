@@ -27,10 +27,13 @@ const Header: React.FC = () => {
               <Link to="/" className={isActive('/')} onClick={() => setIsMenuOpen(false)}>Home</Link>
             </li>
             <li>
-              <Link to="/archive" className={isActive('/archive')} onClick={() => setIsMenuOpen(false)}>Archivio</Link>
+              <Link to="/in-scena" className={isActive('/in-scena')} onClick={() => setIsMenuOpen(false)}>In scena</Link>
             </li>
             <li>
               <Link to="/upcoming" className={isActive('/upcoming')} onClick={() => setIsMenuOpen(false)}>Prossimi Spettacoli</Link>
+            </li>
+            <li>
+              <Link to="/archivio" className={isActive('/archivio')} onClick={() => setIsMenuOpen(false)}>Archivio</Link>
             </li>
           </ul>
         </nav>

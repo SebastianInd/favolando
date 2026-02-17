@@ -127,7 +127,8 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)),
+  background:
+    linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)),
     url("/images/trapasso.png");
   background-size: cover;
   background-position: center;
@@ -156,7 +157,9 @@ body {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
 }
 
 .cta-button:hover {
@@ -185,6 +188,12 @@ body {
 }
 
 /* Show Card */
+.show-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .show-card {
   background: var(--white);
   border-radius: 10px;
@@ -377,5 +386,63 @@ body {
     content: attr(data-label);
     font-weight: 600;
     color: var(--secondary-color);
+  }
+}
+
+/* Show Detail Page */
+.show-detail-page {
+  padding: 4rem 20px;
+}
+
+.show-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.show-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.show-main-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-section h3 {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+}
+
+.info-section p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.actors ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.actors li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .show-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }

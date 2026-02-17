@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Archive from './pages/Archive';
 import Upcoming from './pages/Upcoming';
+import ShowDetail from './pages/ShowDetail';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/archive" element={<Archive />} />
+            <Route path="/in-scena" element={<ShowDetail />} />
+            <Route path="/archivio" element={<Archive />} />
+            <Route path="/archivio/:id" element={<ShowDetail />} />
             <Route path="/upcoming" element={<Upcoming />} />
           </Routes>
         </main>
