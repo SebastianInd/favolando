@@ -46,7 +46,7 @@ const ShowDetail: React.FC = () => {
         
         <div className="show-info">
             <div className="info-section description">
-                <h3>Sinossi</h3>
+                <h3>Trama</h3>
                 <p>{show.description}</p>
             </div>
 
@@ -73,7 +73,7 @@ const ShowDetail: React.FC = () => {
 
             {show.actors && show.actors.length > 0 && (
                 <div className="info-section actors">
-                    <h3>Cast</h3>
+                    <h3>Attori</h3>
                     <ul>
                         {show.actors.map((actor, idx) => (
                             <li key={idx}>

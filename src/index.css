@@ -243,6 +243,7 @@ body {
 .show-description {
   color: #666;
   margin-bottom: 1.5rem;
+  white-space: pre-wrap;
 }
 
 .credit-item {
@@ -424,6 +425,7 @@ body {
 .info-section p {
   color: #555;
   line-height: 1.8;
+  white-space: pre-wrap;
 }
 
 .actors ul {

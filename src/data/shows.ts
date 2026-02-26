@@ -26,21 +26,29 @@ export interface Show {
 export const shows: Show[] = [
   {
     id: "fidanzato-ideale",
-    title: "Il fidanzato ideale",
+    title: "Il fidanzato ideale di S. de Ruvo",
     season: "Stagione 2026-2027",
-    shortDescription: "Tra equivoci e un portinaio complice, vi aspettiamo a teatro con \"Il fidanzato ideale\" di Stefania de Ruvo. Una commedia brillante in due atti che ci ricorda come, a volte, la realtà superi di gran lunga la fantasia (soprattutto quando bussa alla porta).",
-    description: "Chiara è vedova e non ha figli. Le sue sorelle, tormentate dall'idea che possa invecchiare in solitudine, la tallonano nel tentativo di vederla finalmente risposata. Esasperata dalle continue pressioni, Chiara inventa un fidanzato immaginario. Grazie alla complicità dell'amica Valeria e del portinaio Gaspare, il \"fidanzato ideale\" prende forma e consistenza. L'inganno rischia però di crollare quando il fantomatico compagno si palesa davvero, proprio mentre entra in scena un vicino di casa in carne e ossa, segretamente innamorato di Chiara. Come riuscirà il trio a gestire questo caos imprevisto?",
+    shortDescription: "Tra equivoci e un portinaio complice, vi aspettiamo a teatro con \"Il fidanzato ideale\" di Stefania de Ruvo. Una commedia brillante in due atti che ci ricorda come, a volte, la realtà superi di gran lunga la fantasia (soprattutto quando bussa alla porta).\nLa Prima è prevista per il 18 ottobre 2026.",
+    description: "Chiara è vedova e non ha figli. Le sue sorelle, tormentate dall'idea che possa invecchiare in solitudine, la tallonano nel tentativo di vederla finalmente risposata. Esasperata dalle continue pressioni, Chiara inventa un fidanzato immaginario.\nGrazie alla complicità dell'amica Valeria e del portinaio Gaspare, il \"fidanzato ideale\" prende forma e consistenza. L'inganno rischia però di crollare quando il fantomatico compagno si palesa davvero, proprio mentre entra in scena un vicino di casa in carne e ossa, segretamente innamorato di Chiara. Come riuscirà il trio a gestire questo caos imprevisto?",
     imageUrl: `${import.meta.env.BASE_URL}images/fidanzato-ideale.png`,
     isCurrent: true,
     duration: "ca. 75 minuti",
     actors: [
-      { name: "Nome Attore 1", character: "Personaggio 1" },
-      { name: "Nome Attore 2", character: "Personaggio 2" },
-      { name: "Nome Attore 3", character: "Personaggio 3" }
+      { name: "Fulvia Parisi", character: "Chiara" },
+      { name: "Luisa Manzoni", character: "Franca" },
+      { name: "Prisca Valenti", character: "Martina" },
+      { name: "Patrizia Ferretti e Adelia Ferreira", character: "Valeria" },
+      { name: "Francesco Cirelli", character: "Paolo" },
+      { name: "Simone Parisi", character: "Gaspare" },
+      { name: "Claudio Ferretti", character: "Christian" },
     ],
     director: "Martina Inderst",
     customData: [
-      { title: "Scenografia", content: "xy, zy" }
+      { title: "Scenografia e trovarobe", content: "Stefano Bettelini, Giuliana e Manuel Friedrich, Enza e Nicola Roncoroni" },
+      { title: "Trucco", content: "Donata Beltraminelli e Ivana Mazzoletti" },
+      { title: "Luci e suono", content: "Patrizio Maspoli e Martina Inderst" },
+      { title: "Macchinista", content: "Giancarlo Parisi" },
+      { title: "Cassiera", content: "Annamaria Storni" },
     ]
   },
   {
