@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { shows } from '../data/shows';
 import ShowCard from '../components/ShowCard';
 
 const Home: React.FC = () => {
+  const currentShow = shows.find(s => s.isCurrent) || shows[0];
+
+  const heroStyle = {
+    backgroundImage: `linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), url("${currentShow.imageUrl}")`
+  };
+
   return (
     <div className="home-page">
-      <section className="hero-section">
+      <section className="hero-section" style={heroStyle}>
         <div className="container">
           <div className="hero-content">
             <h1>Benvenuti su Favolando</h1>
@@ -19,10 +26,10 @@ const Home: React.FC = () => {
         <h2 className="section-title">In Scena</h2>
         <Link to="/in-scena" className="show-card-link">
             <ShowCard
-            title="Il trapasso con fracasso"
-            season="Stagione 2023-2024"
-            description="Una commedia esilarante che affronta temi profondi con leggerezza e ironia. Un viaggio tra il ridicolo e il sublime."
-            imageUrl={`${import.meta.env.BASE_URL}images/trapasso.png`}
+            title={currentShow.title}
+            season={currentShow.season}
+            description={currentShow.shortDescription}
+            imageUrl={currentShow.imageUrl}
             credits={[]}
             />
         </Link>
