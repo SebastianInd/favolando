@@ -76,9 +76,22 @@ const ShowDetail: React.FC = () => {
                     <h3>Cast</h3>
                     <ul>
                         {show.actors.map((actor, idx) => (
-                            <li key={idx}>{actor}</li>
+                            <li key={idx}>
+                                <strong>{actor.character}:</strong> {actor.name}
+                            </li>
                         ))}
                     </ul>
+                </div>
+            )}
+
+            {show.customData && show.customData.length > 0 && (
+                <div className="show-custom-data">
+                    {show.customData.map((data, idx) => (
+                        <div key={idx} className="info-section custom-data">
+                            <h3>{data.title}</h3>
+                            <p>{data.content}</p>
+                        </div>
+                    ))}
                 </div>
             )}
         </div>

@@ -1,3 +1,13 @@
+export interface Actor {
+  name: string;
+  character: string;
+}
+
+export interface CustomData {
+  title: string;
+  content: string;
+}
+
 export interface Show {
   id: string;
   title: string;
@@ -7,9 +17,10 @@ export interface Show {
   imageUrl: string;
   isCurrent: boolean;
   duration?: string;
-  actors?: string[];
+  actors?: Actor[];
   director?: string;
   music?: string;
+  customData?: CustomData[];
 }
 
 export const shows: Show[] = [
@@ -22,8 +33,15 @@ export const shows: Show[] = [
     imageUrl: `${import.meta.env.BASE_URL}images/fidanzato-ideale.png`,
     isCurrent: true,
     duration: "ca. 75 minuti",
-    actors: ["Attore 1", "Attore 2", "Attore 3"], // Placeholder data
-    director: "Martina Inderst"
+    actors: [
+      { name: "Nome Attore 1", character: "Personaggio 1" },
+      { name: "Nome Attore 2", character: "Personaggio 2" },
+      { name: "Nome Attore 3", character: "Personaggio 3" }
+    ],
+    director: "Martina Inderst",
+    customData: [
+      { title: "Scenografia", content: "xy, zy" }
+    ]
   },
   {
     id: "trapasso-con-fracasso",
