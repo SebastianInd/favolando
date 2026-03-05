@@ -83,6 +83,26 @@ const ShowDetail: React.FC = () => {
                     </ul>
                 </div>
             )}
+            
+            {show.songUrl && (
+                <div className="info-section song">
+                   <h3>Canzone</h3>
+                   <audio controls style={{ width: '100%' }}>
+                       <source src={show.songUrl} type={show.songUrl.toLowerCase().endsWith('.wav') ? 'audio/wav' : show.songUrl.toLowerCase().endsWith('.mp3') ? 'audio/mpeg' : 'audio/mp4'} />
+                       Il tuo browser non supporta l'elemento audio.
+                   </audio>
+                </div>
+            )}
+
+            {show.videoUrl && (
+                <div className="info-section video">
+                   <h3>Video</h3>
+                   <video controls width="100%">
+                       <source src={show.videoUrl} type="video/mp4" />
+                       Il tuo browser non supporta il tag video.
+                   </video>
+                </div>
+            )}
 
             {show.customData && show.customData.length > 0 && (
                 <div className="show-custom-data">

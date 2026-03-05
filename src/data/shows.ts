@@ -21,6 +21,8 @@ export interface Show {
   director?: string;
   music?: string;
   customData?: CustomData[];
+  songUrl?: string;
+  videoUrl?: string;
 }
 
 export const shows: Show[] = [
@@ -73,7 +75,8 @@ export const shows: Show[] = [
     season: "Stagione 2016-2017",
     shortDescription: "La leggenda di Hamelin prende vita sul palco.",
     imageUrl: `${import.meta.env.BASE_URL}images/pifferaio.png`,
-    isCurrent: false
+    isCurrent: false,
+    videoUrl: `${import.meta.env.BASE_URL}videos/9_pifferaio_dietro_le_quinte.m4v`
   },
   {
     id: "aladino",
@@ -81,7 +84,8 @@ export const shows: Show[] = [
     season: "Stagione 2013-2015",
     shortDescription: "Un viaggio da mille e una notte.",
     imageUrl: `${import.meta.env.BASE_URL}images/8_Aladino_finale_Jafar.jpg`,
-    isCurrent: false
+    isCurrent: false,
+    songUrl: `${import.meta.env.BASE_URL}songs/8_aladino_jasmina.mp3`
   },
   {
     id: "emil",
@@ -89,7 +93,8 @@ export const shows: Show[] = [
     season: "Stagione 2011-2012",
     shortDescription: "Un classico per ragazzi che insegna il valore dell'amicizia e della giustizia.",
     imageUrl: `${import.meta.env.BASE_URL}images/7_Emil_e_i_detective_palco.jpg`,
-    isCurrent: false
+    isCurrent: false,
+    songUrl: `${import.meta.env.BASE_URL}songs/7_emil_compagni.mp3`
   },
   {
     id: "robinhood",
@@ -97,7 +102,8 @@ export const shows: Show[] = [
     season: "Stagione 2009-2010",
     shortDescription: "La leggenda di Robin Hood prende vita sul palco.",
     imageUrl: `${import.meta.env.BASE_URL}images/6_Robin_Hood_gruppo.png`,
-    isCurrent: false
+    isCurrent: false,
+    songUrl: `${import.meta.env.BASE_URL}songs/6_robin_hood.mp3`
   },
   {
     id: "gattigattinigattacci",
@@ -105,7 +111,8 @@ export const shows: Show[] = [
     season: "Stagione 2007-2008",
     shortDescription: "",
     imageUrl: `${import.meta.env.BASE_URL}images/5_gatti_gattini_gattacci_gruppo.jpg`,
-    isCurrent: false
+    isCurrent: false,
+    songUrl: `${import.meta.env.BASE_URL}songs/5_gatti_amici_per_sempre.wav`
   },
   {
     id: "rosaspina",
@@ -113,7 +120,8 @@ export const shows: Show[] = [
     season: "Stagione 2005-2006",
     shortDescription: "",
     imageUrl: `${import.meta.env.BASE_URL}images/4_Rosaspina_gruppo.JPG`,
-    isCurrent: false
+    isCurrent: false,
+    songUrl: `${import.meta.env.BASE_URL}songs/4_rosaspina_il_pianto_della_regina.m4a`
   },
   {
     id: "tavolinomagico",
@@ -121,7 +129,8 @@ export const shows: Show[] = [
     season: "Stagione 2004",
     shortDescription: "",
     imageUrl: `${import.meta.env.BASE_URL}images/3_Tavolino_magico_le_nostre_scenografe.jpg`,
-    isCurrent: false
+    isCurrent: false,
+    songUrl: `${import.meta.env.BASE_URL}songs/3_tavolino_insieme.m4a`
   },
   {
     id: "malok",
@@ -129,7 +138,8 @@ export const shows: Show[] = [
     season: "Stagione 2002-2003",
     shortDescription: "",
     imageUrl: `${import.meta.env.BASE_URL}images/2_Malok_gruppo.jpg`,
-    isCurrent: false
+    isCurrent: false,
+    songUrl: `${import.meta.env.BASE_URL}songs/2_malok_oje_oje.m4a`
   },
   {
     id: "hamelin",
