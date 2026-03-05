@@ -12,8 +12,8 @@ export interface Show {
   id: string;
   title: string;
   season: string;
-  description: string;
-  shortDescription?: string;
+  description?: string;
+  shortDescription: string;
   imageUrl: string;
   isCurrent: boolean;
   duration?: string;
@@ -54,37 +54,89 @@ export const shows: Show[] = [
   {
     id: "trapasso-con-fracasso",
     title: "Il trapasso con fracasso",
-    season: "Stagione 2023-2024",
-    description: "Una commedia esilarante che affronta temi profondi con leggerezza e ironia. Un viaggio tra il ridicolo e il sublime.",
-    imageUrl: `${import.meta.env.BASE_URL}images/trapasso.png`,
-    isCurrent: false,
-    director: "Martina Inderst"
+    season: "Stagione 2021-2023",
+    shortDescription: "Una commedia esilarante che affronta temi profondi con leggerezza e ironia. Un viaggio tra il ridicolo e il sublime.",
+    imageUrl: `${import.meta.env.BASE_URL}images/11_il_trapasso_con_fracasso.jpeg`,
+    isCurrent: false
   },
   {
     id: "prezzemolina",
     title: "Prezzemolina",
     season: "Stagione 2018-2019",
-    description: "Una fiaba classica rivisitata con brio e colori.",
-    imageUrl: `${import.meta.env.BASE_URL}images/prezzemolina.png`,
-    isCurrent: false,
-    director: "Martina Inderst"
+    shortDescription: "Una fiaba classica rivisitata con brio e colori.",
+    imageUrl: `${import.meta.env.BASE_URL}images/10_Prezzemolina.png`,
+    isCurrent: false
   },
   {
     id: "pifferaio-magico",
     title: "Il Pifferaio Magico",
     season: "Stagione 2016-2017",
-    description: "La leggenda di Hamelin prende vita sul palco.",
+    shortDescription: "La leggenda di Hamelin prende vita sul palco.",
     imageUrl: `${import.meta.env.BASE_URL}images/pifferaio.png`,
-    isCurrent: false,
-    director: "Martina Inderst"
+    isCurrent: false
   },
   {
     id: "aladino",
     title: "Aladino",
     season: "Stagione 2013-2015",
-    description: "Un viaggio da mille e una notte.",
-    imageUrl: `${import.meta.env.BASE_URL}images/aladino.png`,
-    isCurrent: false,
-    director: "Martina Inderst"
+    shortDescription: "Un viaggio da mille e una notte.",
+    imageUrl: `${import.meta.env.BASE_URL}images/8_Aladino_finale_Jafar.jpg`,
+    isCurrent: false
+  },
+  {
+    id: "emil",
+    title: "Emil e i detective",
+    season: "Stagione 2011-2012",
+    shortDescription: "Un classico per ragazzi che insegna il valore dell'amicizia e della giustizia.",
+    imageUrl: `${import.meta.env.BASE_URL}images/7_Emil_e_i_detective_palco.jpg`,
+    isCurrent: false
+  },
+  {
+    id: "robinhood",
+    title: "Robin Hood",
+    season: "Stagione 2009-2010",
+    shortDescription: "La leggenda di Robin Hood prende vita sul palco.",
+    imageUrl: `${import.meta.env.BASE_URL}images/6_Robin_Hood_gruppo.png`,
+    isCurrent: false
+  },
+  {
+    id: "gattigattinigattacci",
+    title: "Gatti, gattini e gattacci",
+    season: "Stagione 2007-2008",
+    shortDescription: "",
+    imageUrl: `${import.meta.env.BASE_URL}images/5_gatti_gattini_gattacci_gruppo.jpg`,
+    isCurrent: false
+  },
+  {
+    id: "rosaspina",
+    title: "Rosaspina",
+    season: "Stagione 2005-2006",
+    shortDescription: "",
+    imageUrl: `${import.meta.env.BASE_URL}images/4_Rosaspina_gruppo.JPG`,
+    isCurrent: false
+  },
+  {
+    id: "tavolinomagico",
+    title: "Il Tavolino Magico",
+    season: "Stagione 2004",
+    shortDescription: "",
+    imageUrl: `${import.meta.env.BASE_URL}images/3_Tavolino_magico_le_nostre_scenografe.jpg`,
+    isCurrent: false
+  },
+  {
+    id: "malok",
+    title: "Malok e la sfortuna di De Scalognes",
+    season: "Stagione 2002-2003",
+    shortDescription: "",
+    imageUrl: `${import.meta.env.BASE_URL}images/2_Malok_gruppo.jpg`,
+    isCurrent: false
+  },
+  {
+    id: "hamelin",
+    title: "Il Pifferaio di Hamelin",
+    season: "Stagione 2001-2002",
+    shortDescription: "",
+    imageUrl: `${import.meta.env.BASE_URL}images/1_Il_pifferaio_di_hamelin_gruppo.jpg`,
+    isCurrent: false
   }
 ];

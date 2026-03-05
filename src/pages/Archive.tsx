@@ -15,7 +15,7 @@ const Archive: React.FC = () => {
             <ShowCard
                 title={show.title}
                 season={show.season}
-                description={show.description}
+                description={show.shortDescription}
                 imageUrl={show.imageUrl}
                 credits={[]} // ShowCard expects credits, we can pass empty or adapt ShowCard later
             />

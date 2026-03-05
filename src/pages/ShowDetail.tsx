@@ -47,7 +47,7 @@ const ShowDetail: React.FC = () => {
         <div className="show-info">
             <div className="info-section description">
                 <h3>Trama</h3>
-                <p>{show.description}</p>
+                <p>{show.description || show.shortDescription}</p>
             </div>
 
             {show.isCurrent && show.duration && (
