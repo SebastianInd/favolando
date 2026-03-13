@@ -188,7 +188,9 @@ body {
 .show-card-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .show-card {
@@ -200,6 +202,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s;
+  height: 100%;
 }
 
 .show-card:hover {
@@ -208,11 +211,14 @@ body {
 
 .show-image-container {
   overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background-color: #eee;
 }
 
 .show-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.5s;
 }
 
@@ -221,7 +227,10 @@ body {
 }
 
 .show-details {
-  padding: 2rem;
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .show-season {
@@ -235,15 +244,26 @@ body {
 }
 
 .show-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--secondary-color);
+  line-height: 1.2;
 }
 
 .show-description {
   color: #666;
   margin-bottom: 1.5rem;
-  white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.show-credits {
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .credit-item {
