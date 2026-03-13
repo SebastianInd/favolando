@@ -94,13 +94,20 @@ const ShowDetail: React.FC = () => {
                 </div>
             )}
 
-            {show.videoUrl && (
-                <div className="info-section video">
+            {show.videos && show.videos.length > 0 && (
+                <div className="info-section videos-section">
                    <h3>Video</h3>
-                   <video controls width="100%">
-                       <source src={show.videoUrl} type="video/mp4" />
-                       Il tuo browser non supporta il tag video.
-                   </video>
+                   <div className="videos-grid">
+                       {show.videos.map((video, idx) => (
+                           <div key={idx} className="video-item">
+                               <h4>{video.title}</h4>
+                               <video controls width="100%">
+                                   <source src={video.url} type={video.url.toLowerCase().endsWith('.m4v') ? 'video/mp4' : 'video/mp4'} />
+                                   Il tuo browser non supporta il tag video.
+                               </video>
+                           </div>
+                       ))}
+                   </div>
                 </div>
             )}
 

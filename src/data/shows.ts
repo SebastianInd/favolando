@@ -3,6 +3,11 @@ export interface Actor {
   character: string;
 }
 
+export interface Video {
+  title: string;
+  url: string;
+}
+
 export interface CustomData {
   title: string;
   content: string;
@@ -22,7 +27,7 @@ export interface Show {
   music?: string;
   customData?: CustomData[];
   songUrl?: string;
-  videoUrl?: string;
+  videos?: Video[];
 }
 
 export const shows: Show[] = [
@@ -76,7 +81,16 @@ export const shows: Show[] = [
     shortDescription: "La leggenda di Hamelin prende vita sul palco.",
     imageUrl: `${import.meta.env.BASE_URL}images/pifferaio.png`,
     isCurrent: false,
-    videoUrl: `${import.meta.env.BASE_URL}videos/9_pifferaio_dietro_le_quinte.m4v`
+    videos: [
+      {
+        title: "Trailer",
+        url: `${import.meta.env.BASE_URL}videos/9_pifferaio_trailer.mp4`
+      },
+      {
+        title: "Dietro le quinte",
+        url: `${import.meta.env.BASE_URL}videos/9_pifferaio_dietro_le_quinte.m4v`
+      }
+    ]
   },
   {
     id: "aladino",
