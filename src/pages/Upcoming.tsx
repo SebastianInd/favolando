@@ -5,6 +5,7 @@ interface ShowEvent {
   Date: string;
   City: string;
   Venue: string;
+  Organizzazione: string;
   Time: string;
   TicketLink?: string;
 }
@@ -48,6 +49,7 @@ const Upcoming: React.FC = () => {
                   <th>Città</th>
                   <th>Luogo</th>
                   <th>Ora</th>
+                  <th>Organizzazione</th>
                   <th>Biglietti</th>
                 </tr>
               </thead>
@@ -59,11 +61,16 @@ const Upcoming: React.FC = () => {
                       <td data-label="Città">{event.City}</td>
                       <td data-label="Luogo">{event.Venue}</td>
                       <td data-label="Ora">{event.Time}</td>
+                      <td data-label="Organizzazione">{event.Organizzazione}</td>
                       <td data-label="Biglietti">
                         {event.TicketLink ? (
-                          <a href={event.TicketLink} target="_blank" rel="noopener noreferrer" className="ticket-btn">
-                            Acquista
-                          </a>
+                          event.TicketLink.startsWith('http') ? (
+                            <a href={event.TicketLink} target="_blank" rel="noopener noreferrer" className="ticket-btn">
+                              Acquista
+                            </a>
+                          ) : (
+                            <span>{event.TicketLink}</span>
+                          )
                         ) : (
                           <span className="no-link">-</span>
                         )}
