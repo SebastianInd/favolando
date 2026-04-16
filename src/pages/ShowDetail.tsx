@@ -40,8 +40,8 @@ const ShowDetail: React.FC = () => {
       </div>
 
       <div className="show-content">
-        <div className="show-image-container">
-            <img src={show.imageUrl} alt={show.title} className="show-main-image" />
+        <div className="show-image-container-detail">
+            <img src={show.detailImageUrl} alt={show.title} className="show-main-image" />
         </div>
         
         <div className="show-info">
@@ -123,6 +123,19 @@ const ShowDetail: React.FC = () => {
             )}
         </div>
       </div>
+
+      {show.gallery && show.gallery.length > 0 && (
+          <div className="gallery-section">
+              <h2 className="section-title">Galleria</h2>
+              <div className="gallery-grid">
+                  {show.gallery.map((imgUrl, idx) => (
+                      <div key={idx} className="gallery-item">
+                          <img src={imgUrl} alt={`${show.title} gallery image ${idx + 1}`} className="gallery-img" />
+                      </div>
+                  ))}
+              </div>
+          </div>
+      )}
     </div>
   );
 };

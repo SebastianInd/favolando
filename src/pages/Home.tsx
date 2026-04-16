@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   const currentShow = shows.find(s => s.isCurrent) || shows[0];
 
   const heroStyle = {
-    backgroundImage: `linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), url("${currentShow.imageUrl}")`
+    backgroundImage: `linear-gradient(rgba(29, 53, 87, 0.8), rgba(29, 53, 87, 0.8)), url("${currentShow.overviewImageUrl}")`
   };
 
   return (
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
             title={currentShow.title}
             season={currentShow.season}
             description={currentShow.shortDescription}
-            imageUrl={currentShow.imageUrl}
+            imageUrl={currentShow.overviewImageUrl}
             credits={[]}
             />
         </Link>
