@@ -15,15 +15,15 @@ const Home: React.FC = () => {
       <section className="hero-section" style={heroStyle}>
         <div className="container">
           <div className="hero-content">
-            <h1>Benvenuti su Favolando</h1>
-            <p className="hero-subtitle">Compagnia Teatrale</p>
-            <Link to="/upcoming" className="cta-button">Prossimi Spettacoli</Link>
+            <h1>Benvenuti su FaVolando</h1>
+            <p className="hero-subtitle">Compagnia teatrale</p>
+            <Link to="/upcoming" className="cta-button">Prossimi spettacoli</Link>
           </div>
         </div>
       </section>
 
       <section className="current-production-section container">
-        <h2 className="section-title">In Scena</h2>
+        <h2 className="section-title">In scena</h2>
         <Link to="/in-scena" className="show-card-link">
             <ShowCard
             title={currentShow.title}
@@ -35,12 +35,16 @@ const Home: React.FC = () => {
         </Link>
       </section>
 
-      <section className="teaser-section container">
-        <div className="teaser-card">
-          <h2>Nuova Produzione 2026</h2>
-          <p>Stiamo lavorando a qualcosa di magico per voi!</p>
-          <p className="teaser-date">La Prima è prevista per il 18 ottobre 2026</p>
-          <Link to="/in-scena" className="text-link">Scopri di più &rarr;</Link>
+      <section className="contact-section container">
+        <div className="contact-card">
+          <h2>Contatti</h2>
+          <p>FaVolando | Via Credera 15 | 6987 Caslano</p>
+          <p className="contact-info">
+            <a href="mailto:compagnia.favolando@gmail.com" className="text-link">compagnia.favolando@gmail.com</a>
+          </p>
+          <p className="contact-info">
+            <a href="tel:+41764539414" className="text-link">+41 76 453 94 14</a>
+          </p>
         </div>
       </section>
     </div>

@@ -35,7 +35,7 @@ export const shows: Show[] = [
     id: "fidanzato-ideale",
     title: "Il fidanzato ideale di S. de Ruvo",
     season: "Stagione 2026-2027",
-    shortDescription: "Tra equivoci e un portinaio complice, vi aspettiamo a teatro con \"Il fidanzato ideale\" di Stefania de Ruvo. Una commedia brillante in due atti che ci ricorda come, a volte, la realtà superi di gran lunga la fantasia (soprattutto quando bussa alla porta).\nLa Prima è prevista per il 18 ottobre 2026.",
+    shortDescription: "Tra equivoci e un portinaio complice, vi aspettiamo a teatro con \"Il fidanzato ideale\" di Stefania de Ruvo. Una commedia brillante in due atti che ci ricorda come, a volte, la realtà superi di gran lunga la fantasia (soprattutto quando bussa alla porta).\nLa Prima è prevista per il 18 ottobre 2026 a Paradiso.",
     description: "Chiara è vedova e non ha figli. Le sue sorelle, tormentate dall'idea che possa invecchiare in solitudine, la tallonano nel tentativo di vederla finalmente risposata. Esasperata dalle continue pressioni, Chiara inventa un fidanzato immaginario.\nGrazie alla complicità dell'amica Valeria e del portinaio Gaspare, il \"fidanzato ideale\" prende forma e consistenza. L'inganno rischia però di crollare quando il fantomatico compagno si palesa davvero, proprio mentre entra in scena un vicino di casa in carne e ossa, segretamente innamorato di Chiara. Come riuscirà il trio a gestire questo caos imprevisto?",
     imageUrl: `${import.meta.env.BASE_URL}images/fidanzato-ideale.png`,
     isCurrent: true,
