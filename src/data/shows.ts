@@ -1,3 +1,11 @@
+import lyricsAladino from './lyrics/aladino';
+import lyricsEmil from './lyrics/emil';
+import lyricsRobinhood from './lyrics/robinhood';
+import lyricsGatti from './lyrics/gattigattinigattacci';
+import lyricsRosaspina from './lyrics/rosaspina';
+import lyricsTavolino from './lyrics/tavolinomagico';
+import lyricsMalok from './lyrics/malok';
+
 export interface Actor {
   name: string;
   character: string;
@@ -29,6 +37,8 @@ export interface Show {
   music?: string;
   customData?: CustomData[];
   songUrl?: string;
+  songTitle?: string;
+  songLyrics?: string;
   videos?: Video[];
 }
 
@@ -145,7 +155,9 @@ export const shows: Show[] = [
       `${import.meta.env.BASE_URL}images/8_aladino/finale.jpg`
     ],
     isCurrent: false,
-    songUrl: `${import.meta.env.BASE_URL}songs/8_aladino_jasmina.mp3`
+    songUrl: `${import.meta.env.BASE_URL}songs/8_aladino_jasmina.mp3`,
+    songTitle: "Jasmina (di Roger Annen)",
+    songLyrics: lyricsAladino,
   },
   {
     id: "emil",
@@ -164,7 +176,9 @@ export const shows: Show[] = [
       `${import.meta.env.BASE_URL}images/7_emil/scena_5.jpg`
     ],
     isCurrent: false,
-    songUrl: `${import.meta.env.BASE_URL}songs/7_emil_compagni.mp3`
+    songUrl: `${import.meta.env.BASE_URL}songs/7_emil_compagni.mp3`,
+    songTitle: "In compagnia",
+    songLyrics: lyricsEmil,
   },
   {
     id: "robinhood",
@@ -183,7 +197,9 @@ export const shows: Show[] = [
       `${import.meta.env.BASE_URL}images/6_robin_hood/scena_5.jpg`
     ],
     isCurrent: false,
-    songUrl: `${import.meta.env.BASE_URL}songs/6_robin_hood.mp3`
+    songUrl: `${import.meta.env.BASE_URL}songs/6_robin_hood.mp3`,
+    songTitle: "Robin Hood",
+    songLyrics: lyricsRobinhood,
   },
   {
     id: "gattigattinigattacci",
@@ -202,7 +218,9 @@ export const shows: Show[] = [
       `${import.meta.env.BASE_URL}images/5_gatti/scena_4.jpg`
     ],
     isCurrent: false,
-    songUrl: `${import.meta.env.BASE_URL}songs/5_gatti_amici_per_sempre.wav`
+    songUrl: `${import.meta.env.BASE_URL}songs/5_gatti_amici_per_sempre.wav`,
+    songTitle: "Amici per sempre",
+    songLyrics: lyricsGatti,
   },
   {
     id: "rosaspina",
@@ -221,7 +239,9 @@ export const shows: Show[] = [
       `${import.meta.env.BASE_URL}images/4_rosaspina/trucco.jpg`
     ],
     isCurrent: false,
-    songUrl: `${import.meta.env.BASE_URL}songs/4_rosaspina_il_pianto_della_regina.m4a`
+    songUrl: `${import.meta.env.BASE_URL}songs/4_rosaspina_il_pianto_della_regina.m4a`,
+    songTitle: "Il pianto della regina",
+    songLyrics: lyricsRosaspina,
   },
   {
     id: "tavolinomagico",
@@ -237,7 +257,9 @@ export const shows: Show[] = [
       `${import.meta.env.BASE_URL}images/3_tavolino/maren.jpg`
     ],
     isCurrent: false,
-    songUrl: `${import.meta.env.BASE_URL}songs/3_tavolino_insieme.m4a`
+    songUrl: `${import.meta.env.BASE_URL}songs/3_tavolino_insieme.m4a`,
+    songTitle: "Insieme (testo: Roger, Luisa e Michèle Annen)",
+    songLyrics: lyricsTavolino,
   },
   {
     id: "malok",
@@ -254,7 +276,8 @@ export const shows: Show[] = [
       `${import.meta.env.BASE_URL}images/2_malok/prove.jpg`
     ],
     isCurrent: false,
-    songUrl: `${import.meta.env.BASE_URL}songs/2_malok_oje_oje.m4a`
+    songUrl: `${import.meta.env.BASE_URL}songs/2_malok_oje_oje.m4a`,
+    songLyrics: lyricsMalok,
   },
   {
     id: "hamelin",

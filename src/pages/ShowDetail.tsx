@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { shows, type Show } from '../data/shows';
 
@@ -89,6 +89,7 @@ const ShowDetail: React.FC = () => {
                 />
                 Il tuo browser non supporta l'elemento audio.
               </audio>
+              {show.songLyrics && <LyricsAccordion lyrics={show.songLyrics} songTitle={show.songTitle} />}
             </div>
           )}
 
@@ -128,6 +129,56 @@ const ShowDetail: React.FC = () => {
       {show.gallery && show.gallery.length > 0 && (
         <GallerySection images={show.gallery} title={show.title} />
       )}
+    </div>
+  );
+};
+
+/* ── Lyrics Accordion ────────────────────────────────────────────── */
+interface LyricsAccordionProps {
+  lyrics: string;
+  songTitle?: string;
+}
+
+const LyricsAccordion: React.FC<LyricsAccordionProps> = ({ lyrics, songTitle }) => {
+  const [open, setOpen] = useState(false);
+  const bodyRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <div className={`lyrics-accordion${open ? ' lyrics-accordion--open' : ''}`}>
+      <button
+        className="lyrics-toggle"
+        onClick={() => setOpen(o => !o)}
+        aria-expanded={open}
+        id="lyrics-toggle-btn"
+      >
+        <span className="lyrics-toggle-label">
+          <svg className="lyrics-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18V6l12-2v12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            <circle cx="6" cy="18" r="3" stroke="currentColor" strokeWidth="1.8" fill="none"/>
+            <circle cx="18" cy="16" r="3" stroke="currentColor" strokeWidth="1.8" fill="none"/>
+          </svg>
+          {songTitle ? <>Canta con noi: <em>{songTitle}</em></> : 'Canta con noi'}
+        </span>
+        <svg
+          className="lyrics-chevron"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <polyline points="6 9 12 15 18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        </svg>
+      </button>
+      <div
+        ref={bodyRef}
+        className="lyrics-body"
+        style={{
+          maxHeight: open
+            ? `${bodyRef.current?.scrollHeight ?? 2000}px`
+            : '0px',
+        }}
+        aria-hidden={!open}
+      >
+        <pre className="lyrics-text">{lyrics.trim()}</pre>
+      </div>
     </div>
   );
 };

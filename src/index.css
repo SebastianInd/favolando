@@ -669,3 +669,75 @@ body {
     height: 2.4rem;
   }
 }
+
+/* ── Lyrics Accordion ──────────────────────────────────────────────── */
+.lyrics-accordion {
+  margin-top: 1.25rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.lyrics-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.2rem;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.lyrics-toggle:hover {
+  opacity: 0.9;
+}
+
+.lyrics-toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lyrics-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.lyrics-chevron {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+
+.lyrics-accordion--open .lyrics-chevron {
+  transform: rotate(180deg);
+}
+
+.lyrics-body {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lyrics-text {
+  padding: 1.4rem 1.5rem 1.6rem;
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #444;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-top: 1px solid #eee;
+}
