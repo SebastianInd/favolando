@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           <h2>Contatti</h2>
           <p>FaVolando | Via Credera 15 | 6987 Caslano</p>
           <p className="contact-info">
-            <a href="mailto:compagnia.favolando@gmail.com" className="text-link">compagnia.favolando@gmail.com</a>
+            <a href="mailto:info@favolando.ch" className="text-link">info@favolando.ch</a>
           </p>
           <p className="contact-info">
             <a href="tel:+41764539414" className="text-link">+41 76 453 94 14</a>
