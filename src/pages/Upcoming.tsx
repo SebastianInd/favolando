@@ -33,10 +33,6 @@ const Upcoming: React.FC = () => {
     <div className="upcoming-page container">
       <h1 className="page-title">Prossimi Spettacoli</h1>
       
-      <div className="upcoming-intro">
-        <p>Non perderti le nostre prossime date! Ecco dove potrai trovarci.</p>
-      </div>
-
       {loading ? (
         <div className="loading">Caricamento date...</div>
       ) : (

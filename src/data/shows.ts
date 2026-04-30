@@ -58,9 +58,10 @@ export const shows: Show[] = [
       { name: "Luisa Manzoni", character: "Franca" },
       { name: "Prisca Valenti", character: "Martina" },
       { name: "Patrizia Ferretti e Adelia Ferreira", character: "Valeria" },
-      { name: "Francesco Cirelli", character: "Paolo" },
+      { name: "Jules Ardizzoni", character: "Paolo" },
       { name: "Simone Parisi", character: "Gaspare" },
       { name: "Claudio Ferretti", character: "Christian" },
+      { name: "Simone, Claudio, Patrizio, Jules", character: "Pretendenti" }
     ],
     director: "Martina Inderst",
     customData: [
@@ -91,7 +92,7 @@ export const shows: Show[] = [
     isCurrent: false,
     videos: [
       {
-        title: "Prova a seguire il tuo cuore",
+        title: "Canta con noi",
         url: `${import.meta.env.BASE_URL}videos/11_trapasso_prova_a_seguire_il_tuo_cuore.mp4`
       }
     ]
@@ -158,6 +159,12 @@ export const shows: Show[] = [
     songUrl: `${import.meta.env.BASE_URL}songs/8_aladino_jasmina.mp3`,
     songTitle: "Jasmina (di Roger Annen)",
     songLyrics: lyricsAladino,
+    videos: [
+      {
+        title: "Happy",
+        url: `${import.meta.env.BASE_URL}videos/8_aladino_happy.mp4`
+      }
+    ]
   },
   {
     id: "emil",
@@ -177,7 +184,7 @@ export const shows: Show[] = [
     ],
     isCurrent: false,
     songUrl: `${import.meta.env.BASE_URL}songs/7_emil_compagni.mp3`,
-    songTitle: "In compagnia",
+    songTitle: "In compagnia (di Roger Annen)",
     songLyrics: lyricsEmil,
   },
   {
@@ -198,7 +205,7 @@ export const shows: Show[] = [
     ],
     isCurrent: false,
     songUrl: `${import.meta.env.BASE_URL}songs/6_robin_hood.mp3`,
-    songTitle: "Robin Hood",
+    songTitle: "Robin Hood (di Roger Annen)",
     songLyrics: lyricsRobinhood,
   },
   {
@@ -219,7 +226,7 @@ export const shows: Show[] = [
     ],
     isCurrent: false,
     songUrl: `${import.meta.env.BASE_URL}songs/5_gatti_amici_per_sempre.wav`,
-    songTitle: "Amici per sempre",
+    songTitle: "Amici per sempre (di Roger Annen)",
     songLyrics: lyricsGatti,
   },
   {
@@ -240,7 +247,7 @@ export const shows: Show[] = [
     ],
     isCurrent: false,
     songUrl: `${import.meta.env.BASE_URL}songs/4_rosaspina_il_pianto_della_regina.m4a`,
-    songTitle: "Il pianto della regina",
+    songTitle: "Il pianto della regina (di Roger Annen)",
     songLyrics: lyricsRosaspina,
   },
   {
@@ -258,7 +265,7 @@ export const shows: Show[] = [
     ],
     isCurrent: false,
     songUrl: `${import.meta.env.BASE_URL}songs/3_tavolino_insieme.m4a`,
-    songTitle: "Insieme (testo: Roger, Luisa e Michèle Annen)",
+    songTitle: "Insieme (di Roger, Luisa e Michèle Annen)",
     songLyrics: lyricsTavolino,
   },
   {
@@ -277,6 +284,7 @@ export const shows: Show[] = [
     ],
     isCurrent: false,
     songUrl: `${import.meta.env.BASE_URL}songs/2_malok_oje_oje.m4a`,
+    songTitle: "Una caramella (di Roger Annen)",
     songLyrics: lyricsMalok,
   },
   {
