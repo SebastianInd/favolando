@@ -1,3 +1,4 @@
+import lyricsFidanzato from './lyrics/fidanzato';
 import lyricsAladino from './lyrics/aladino';
 import lyricsEmil from './lyrics/emil';
 import lyricsRobinhood from './lyrics/robinhood';
@@ -70,7 +71,10 @@ export const shows: Show[] = [
       { title: "Luci e suono", content: "Patrizio Maspoli e Martina Inderst" },
       { title: "Macchinista", content: "Giancarlo Parisi" },
       { title: "Cassiera", content: "Annamaria Storni" },
-    ]
+    ],
+    songUrl: `${import.meta.env.BASE_URL}songs/12_fidanzato_sessantanni.mp3`,
+    songTitle: "Sessant'anni (di P.M. - FaVolando - Suno)",
+    songLyrics: lyricsFidanzato
   },
   {
     id: "trapasso-con-fracasso",
