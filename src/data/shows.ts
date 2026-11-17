@@ -53,7 +53,7 @@ export const shows: Show[] = [
     overviewImageUrl: `${import.meta.env.BASE_URL}images/12_fidanzato/manifesto.jpg`,
     detailImageUrl: `${import.meta.env.BASE_URL}images/12_fidanzato/manifesto.jpg`,
     isCurrent: true,
-    duration: "ca. 75 minuti",
+    duration: "ca. 90 minuti",
     actors: [
       { name: "Fulvia Parisi", character: "Chiara" },
       { name: "Luisa Manzoni", character: "Franca" },
